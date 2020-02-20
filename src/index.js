@@ -2,6 +2,6 @@
 // You should implement your task here.
 
 module.exports = function towelSort (matrix) {
-  var towelArray = [];
-  return matrix.flat(10);
+
+  return matrix.reduce((acc, val) => Array.isArray(val) ? acc.concat(towelSort(val)) : acc.concat(val), []);
 }
