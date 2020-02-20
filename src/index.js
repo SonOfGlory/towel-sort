@@ -2,6 +2,7 @@
 // You should implement your task here.
 
 module.exports = function towelSort (matrix) {
+  var matrixToString = matrix.toString().replace('[', '').replace(']', '');
 
-  return matrix.reduce((acc, val) => Array.isArray(val) ? acc.concat(towelSort(val)) : acc.concat(val), []);
+  return JSON.parse("[" + matrixToString + "]");
 }
